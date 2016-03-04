@@ -4,6 +4,10 @@ var otherBall;
 
 var detectCollision = function(otherBall) {
 
+  var distance = dist(this.position.x, this.position.y, otherBall.position.x, otherBall.position.y);
+  var radiiSum = this.radius + otherBall.radius;
+  return distance < radiiSum ? true : false;
+  
   // paste code from your detectCollision() here
 
 };
